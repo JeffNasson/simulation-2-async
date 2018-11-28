@@ -1,0 +1,62 @@
+.dashboard-parent{
+    height: 868px;
+    width:100%;
+    background-color: $color-light-green;
+}
+
+.dashboard-child{
+    height: 100%;
+    display: flex;
+    background-color:$color-light-green;
+    width: 100%;
+}
+
+.dashboard-child-left{
+    height: 100%;
+    width: 20%;
+    background-color: $color-light-green;
+}
+
+
+.dashboard-child-right{
+    height: 100%;
+    width: 20%;
+    background-color: $color-light-green;
+}
+
+.dashboard-child-center{
+    height: 100%;
+    width:60%;
+    background-color: $color-clear-green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.add-new-property-button{
+    height: 35px;
+    width: 175px;
+    background-color: $color-light-green;
+    border: 0;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 700;
+    font-size: 100%;
+}
+
+.desired-rent-filter-reset{
+    // display: flex;
+    margin: 25px;
+}
+
+.desired-rent-filter-reset button{
+    margin-left: 5px;
+}
+
+
+.desired-rent-filter-reset hr{
+    background-color: $color-dark-green;
+    width: 775px;
+    height: 3px;
+    margin-top: 35px;
+}

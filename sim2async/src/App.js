@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import './styles/main.scss'
+import './styles/main.scss';
+import './App.css';
+
+import routes from './routes.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        
+        {routes}
       </div>
     );
   }

@@ -1,0 +1,44 @@
+.header-parent{
+    background-color: $color-mid-green;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+.houser-header-textlogo{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.houser-header-textlogo img{
+    padding:10px;
+}
+
+.houser-header-textlogo h1{
+    padding: 10px;
+    color: $color-white;
+    font-size: 30px;
+    font-family:'Open Sans',sans-serif;
+}
+
+.houser-bold{
+    font-weight: 700;
+}
+.dashboard{
+    font-weight: 400;
+}
+
+
+.logout-parent{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-text{
+    color:$color-white;
+    font-family:'Open Sans',sans-serif;
+}

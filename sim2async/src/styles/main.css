@@ -1,0 +1,137 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* Because we imported open sans font we can use it here */
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+  vertical-align: baseline;
+  /* Really important to know whats happening here. box-sizing can save you a lot of hassle */
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.dashboard-parent {
+  height: 868px;
+  width: 100%;
+  background-color: #8aea92; }
+
+.dashboard-child {
+  height: 100%;
+  display: flex;
+  background-color: #8aea92;
+  width: 100%; }
+
+.dashboard-child-left {
+  height: 100%;
+  width: 20%;
+  background-color: #8aea92; }
+
+.dashboard-child-right {
+  height: 100%;
+  width: 20%;
+  background-color: #8aea92; }
+
+.dashboard-child-center {
+  height: 100%;
+  width: 60%;
+  background-color: #afd4c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; }
+
+.add-new-property-button {
+  height: 35px;
+  width: 175px;
+  background-color: #8aea92;
+  border: 0;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 700;
+  font-size: 100%; }
+
+.desired-rent-filter-reset {
+  margin: 25px; }
+
+.desired-rent-filter-reset button {
+  margin-left: 5px; }
+
+.desired-rent-filter-reset hr {
+  background-color: #3b5249;
+  width: 775px;
+  height: 3px;
+  margin-top: 35px; }
+
+.header-parent {
+  background-color: #519872;
+  display: flex;
+  height: 100px;
+  width: 100%; }
+
+.houser-header-textlogo {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center; }
+
+.houser-header-textlogo img {
+  padding: 10px; }
+
+.houser-header-textlogo h1 {
+  padding: 10px;
+  color: #f6f0f0;
+  font-size: 30px;
+  font-family: 'Open Sans',sans-serif; }
+
+.houser-bold {
+  font-weight: 700; }
+
+.dashboard {
+  font-weight: 400; }
+
+.logout-parent {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.logout-text {
+  color: #f6f0f0;
+  font-family: 'Open Sans',sans-serif; }
