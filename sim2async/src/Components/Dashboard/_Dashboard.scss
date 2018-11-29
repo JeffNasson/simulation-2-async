@@ -14,20 +14,20 @@
 .dashboard-child-left{
     height: 100%;
     width: 20%;
-    background-color: $color-light-green;
+    background-color: $color-clear-green;
 }
 
 
 .dashboard-child-right{
     height: 100%;
     width: 20%;
-    background-color: $color-light-green;
+    background-color: $color-clear-green;
 }
 
 .dashboard-child-center{
     height: 100%;
     width:60%;
-    background-color: $color-clear-green;
+    background-color: $color-white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,11 +47,10 @@
 .desired-rent-filter-reset{
     // display: flex;
     margin: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }
 
-.desired-rent-filter-reset button{
-    margin-left: 5px;
-}
 
 
 .desired-rent-filter-reset hr{
@@ -59,4 +58,30 @@
     width: 775px;
     height: 3px;
     margin-top: 35px;
+}
+
+.desired-rent-filter-reset input{
+    height: 30px;
+    width: 75px;
+}
+
+
+//buttons
+.desired-rent-filter-reset button{
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    border: 0;
+    height: 30px;
+    width: 75px;
+    font-size: 105%;
+    font-weight: 550;
+}
+.filter-button{
+    background-color: $color-light-green;
+    color: $color-dark-green;
+}
+
+.reset-button{
+    background-color: $color-dark-green;
+    color: $color-white;
 }

@@ -1,0 +1,73 @@
+//parent containers
+.auth-parent{
+    height: 100vh;
+    width: 100%;
+}
+
+.auth-child{
+    height: 100%;
+    display: flex;
+    background-color: $color-light-green;
+}
+//end parent containers
+
+//three child containers
+.auth-child-left{
+    height:100%;
+    width:25%;
+    background-color: $color-clear-green;
+}
+.auth-child-right{
+    height: 100%;
+    width: 25%;
+    background-color: $color-clear-green;
+}
+.auth-child-center{
+    height: 100%;
+    width:50%;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+//end three child containers
+
+//center container components
+.auth-house-logo{
+    height: 25%;
+    margin: 35px;
+}
+
+.username-password-inputs h1{
+    display: flex;
+    font-family: $font-sans;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.username-password-inputs input{
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+.auth-login-register-buttons button{
+    border:0;
+    margin: 10px;
+    font-family: $font-sans;
+    height: 35px;
+    width: 110px;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+.auth-login-button{
+    background-color: $color-light-green;
+}
+.auth-register-button{
+    background-color: $color-dark-green;
+    color: $color-white;
+}
+
+//end center container components
+
+

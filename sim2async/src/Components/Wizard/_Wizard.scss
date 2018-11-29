@@ -1,0 +1,376 @@
+//wizard base for all wizard views
+.wizard-parent{
+    height: 868px;
+    width:100%;
+    background-color: $color-light-green;
+    font-family: $font-sans;
+}
+
+.wizard-base-child{
+    height: 100%;
+    display: flex;
+    background-color:$color-light-green;
+    width: 100%;
+}
+
+.wizard-base-left{
+    height: 100%;
+    width: 25%;
+    background-color: $color-clear-green;
+}
+.wizard-base-center{
+    height: 100%;
+    width:50%;
+    background-color: $color-light-green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.wizard-base-right{
+    height: 100%;
+    width: 25%;
+    background-color: $color-clear-green;
+}
+
+.add-new-listing-cancel-button{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-sans;
+}
+
+.add-new-listing-cancel-button button{
+    border: 0;
+    background-color: $color-pink;
+    font-family: $font-sans;
+    height: 35px;
+    width: 75px;
+    font-weight: 900;
+    font-size: 110%;
+}
+
+.add-new-listing-cancel-button h1{
+    font-family: $font-sans;
+    font-size: 150%;
+    font-weight: 700;
+}
+
+.checkmark {
+    display:inline-block;
+    width: 35px;
+    height:35px;
+    background-color: $color-mid-green;
+    border-radius:50%;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    border: 5px solid $color-clear-green;
+}
+
+.checkmark:before{
+    content:"";
+    position: absolute;
+    width:3px;
+    height:12px;
+    background-color:$color-white;
+    left:12px;
+    top:7px;
+}
+
+.checkmark:after{
+    content:"";
+    position: absolute;
+    width:3px;
+    height:3px;
+    background-color:$color-white;
+    left:9px;
+    top:16px;
+}
+
+//end wizard base
+
+
+//wizard1
+.wizard1-parent{
+    height: 100%;
+    width: 80%;
+    font-family: $font-sans;
+}
+.wizard1-parent h3{
+    font-weight: 400;
+    font-size: 150%;
+}
+
+.wizard1-dots{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px 0 20px 0;
+}
+
+.wizard1-background-dots1{
+    height: 35px;
+    width: 35px;
+    background-color: $color-mid-green;
+    border-radius: 50%;
+    border: 5px solid $color-clear-green;
+    display: flex;
+}
+
+.wizard1-background-dots{
+    height: 35px;
+    width: 35px;
+    background-color: $color-clear-green;
+    border-radius: 50%;
+    // display: inline-block;
+}
+
+.wizard1-property-name-description{
+    width: 100%;
+    margin: 15px 0 20px 0;
+}
+
+.wizard1-property-name-description h2{
+    display: flex;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.wizard1-property-name-description input{
+    width: 100%;
+    border: 3px solid $color-clear-green;
+}
+
+.wizard1-property-description{
+    height: 100px;
+}
+
+.wizard1-next-button{
+    background-color: $color-dark-green;
+    color: $color-white;
+    border: 0;
+    height: 35px;
+    width: 125px;
+    font-size: 100%;
+}
+
+//end wizard1
+
+
+//wizard2
+.wizard2-parent{
+    height: 100%;
+    width: 80%;
+    font-family: $font-sans;
+}
+
+.wizard2-parent input{
+    border: 3px solid $color-clear-green;
+}
+.wizard2-parent h3{
+    font-weight: 400;
+    font-size: 150%;
+}
+
+.wizard2-dots{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px 0 20px 0;
+}
+
+.wizard2-background-dots1{
+    height: 35px;
+    width: 35px;
+    background-color: $color-mid-green;
+    border-radius: 50%;
+    border: 5px solid $color-clear-green;
+    display: flex;
+}
+
+.wizard2-background-dots2{
+    height: 35px;
+    width: 35px;
+    background-color: $color-clear-green;
+    border-radius: 50%;
+    display: flex;
+}
+
+.wizard2-address{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.wizard2-address-parent h2{
+    width: 20%;
+}
+
+
+.wizard2-city-state{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.wizard2-city-state input{
+    width: 35%;
+}
+
+.wizard2-city-state-h2{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: 3%;
+}
+.wizard2-city-state-h2 h2{
+    margin-bottom: 1%;
+}
+
+.wizard2-zip-parent{
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.wizard2-zip-parent h2{
+    margin-left: 3%;
+    margin-bottom: 1%;
+}
+
+.wizard2-step-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.wizard2-step-buttons button{
+     background-color: $color-dark-green;
+    color: $color-white;
+    border: 0;
+    height: 35px;
+    width: 125px;
+    font-size: 100%;
+}
+
+//end wizard2
+
+
+//wizard3
+
+.wizard3-parent{
+    height: 100%;
+    width: 80%;
+    font-family: $font-sans;
+}
+
+.wizard3-parent input{
+    border: 3px solid $color-clear-green;
+}
+
+.wizard3-parent h3{
+    font-weight: 400;
+    font-size: 150%;
+}
+
+.wizard3-dots{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px 0 20px 0;
+}
+
+.wizard3-preview-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+    border: 3px solid $color-mid-green;
+    background-color: $color-clear-green;
+    margin-bottom: 3%;
+}
+
+.wizard3-imageurl-parent{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wizard3-imageurl-parent h2{
+    margin-bottom: 1%;
+    margin-left: 3%;
+}
+.wizard3-imageurl{
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+//end wizard3
+
+
+//wizard4
+
+.wizard4-parent{
+    height: 100%;
+    width: 80%;
+    font-family: $font-sans;
+}
+
+.wizard4-parent input{
+    border: 3px solid $color-clear-green;
+}
+
+.wizard4-parent h3{
+    font-weight: 400;
+    font-size: 150%;
+}
+
+.wizard4-dots{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px 0 20px 0;
+}
+
+.wizard4-loan-amount{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+}
+.wizard4-loan-amount h2{
+    display: flex;
+    margin-left: 3%;
+    margin-bottom:1%;
+}
+
+.wizard4-monthly-mortgage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+.wizard4-monthly-mortgage h2{
+    display: flex;
+    margin-left: 3%;
+    margin-bottom: 1%;
+}
+
+//end wizard4
+
+
+//wizard5
+
+//end wizard5

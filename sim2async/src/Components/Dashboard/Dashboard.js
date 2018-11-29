@@ -14,7 +14,6 @@ export default class Dashboard extends Component{
                 <Header /> 
                 <div className='dashboard-child'>
                     <div className='dashboard-child-left'>
-                        Left
                     </div>
                     <div className='dashboard-child-center'>
                         <button className='add-new-property-button'>Add New Property</button>
@@ -27,7 +26,6 @@ export default class Dashboard extends Component{
                         <h1>Home Listings</h1>
                     </div>
                     <div className='dashboard-child-right'>
-                        right
                     </div>
                 </div>
             </div>
