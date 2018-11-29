@@ -1,4 +1,5 @@
-import React,{Component} from 'react'
+import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
 import Header from '../Header/Header.js'
 
@@ -16,7 +17,7 @@ export default class Dashboard extends Component{
                     <div className='dashboard-child-left'>
                     </div>
                     <div className='dashboard-child-center'>
-                        <button className='add-new-property-button'>Add New Property</button>
+                        <Link to='/wizard/1'><button className='add-new-property-button'>Add New Property</button></Link>
                         <div className='desired-rent-filter-reset'>
                             List properties with "desired rent" greater than: $<input placeholder='0' />
                             <button className='filter-button'>Filter</button>

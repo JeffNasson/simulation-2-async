@@ -373,4 +373,68 @@
 
 //wizard5
 
+.wizard5-parent{
+    height: 100%;
+    width: 80%;
+    font-family: $font-sans;
+}
+
+.wizard5-parent input{
+    border: 3px solid $color-clear-green;
+}
+
+.wizard5-parent h3{
+    font-weight: 400;
+    font-size: 150%;
+}
+
+.wizard5-dots{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px 0 20px 0;
+}
+
+.wizard5-step-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wizard5-previous-button{
+    background-color: $color-dark-green;
+    color: $color-white;
+    border: 0;
+    height: 35px;
+    width: 125px;
+    font-size: 100%;
+}
+
+.wizard5-next-button{
+    background-color: $color-clear-green;
+    color: $color-dark-green;
+    border: 0;
+    height: 35px;
+    width: 125px;
+    font-size: 100%;
+}
+
+.wizard5-parent h4{
+    margin-bottom: 5%;
+}
+
+.wizard5-desired-rent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.wizard5-desired-rent h2{
+    margin-bottom: 1%;
+    display: flex;
+    margin-left: 3%;
+}
+
 //end wizard5
