@@ -1,11 +1,22 @@
 import React,{Component} from 'react';
+import axios from 'axios';
+import {Link,withRouter} from 'react-router-dom';
 
 import House from '../../images/assets/header_logo.png';
 
-export default class Header extends Component{
+class Header extends Component{
     constructor(){
         super()
         this.state={}
+        this.logout=this.logout.bind(this);
+    }
+
+    logout(){
+        console.log(this.props)
+        axios.get(`/api/logout`)
+             .then(res=>{
+                 this.props.history.push(`/`)
+             })
     }
 
     render(){
@@ -17,9 +28,11 @@ export default class Header extends Component{
                     <h1 className='dashboard'>Dashboard</h1>
                 </div>
                 <div className='logout-parent'>
-                    <h3 className='logout-text'>Logout</h3>
+                    <h3 onClick={this.logout} className='logout-text'>Logout</h3>
                 </div>
             </div>
         )
     }
 }
+
+export default withRouter(Header);

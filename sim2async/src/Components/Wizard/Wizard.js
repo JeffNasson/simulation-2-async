@@ -25,11 +25,6 @@ export default class Wizard extends Component{
                         <Route path='/wizard/4' component={Wizard4} />
                         <Route path='/wizard/5' component={Wizard5} />
                     </Switch>
-                {/* <div className='wizard-base-child'>
-                    <div className='wizard-base-left'>left</div>
-                    <div className='wizard-base-center'>center</div>
-                    <div className='wizard-base-right'>right</div>
-                </div> */}
             </div>
         )
     }
