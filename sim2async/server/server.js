@@ -40,13 +40,15 @@ app.use(checkUserSession)
 ////Authorization Endpoints
 app.post('/api/register',ctrl.register);
 app.post('/api/login',ctrl.loginUser);
-app.get(`/api/logout`,ctrl.logout)
+app.post(`/api/logout`,ctrl.logout);
 
 
 ////END Authorization Endpoints
 
 ////Properties Endpoints
-
+app.post('/api/properties',ctrl.newProperty);
+app.get(`/api/properties`,ctrl.getProperties);
+app.delete(`/api/properties/:id`,ctrl.deleteProperty);
 
 ////End Properties Endpoints
 

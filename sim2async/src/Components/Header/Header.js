@@ -12,8 +12,8 @@ class Header extends Component{
     }
 
     logout(){
-        console.log(this.props)
-        axios.get(`/api/logout`)
+        // console.log(this.props)
+        axios.post(`/api/logout`)
              .then(res=>{
                  this.props.history.push(`/`)
              })
@@ -28,7 +28,7 @@ class Header extends Component{
                     <h1 className='dashboard'>Dashboard</h1>
                 </div>
                 <div className='logout-parent'>
-                    <h3 onClick={this.logout} className='logout-text'>Logout</h3>
+                    <button onClick={this.logout} className='logout-text'>Logout</button>
                 </div>
             </div>
         )

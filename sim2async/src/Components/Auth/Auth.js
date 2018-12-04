@@ -64,6 +64,7 @@ export default class Auth extends Component{
                             <button onClick={()=>this.loginUser()} className='auth-login-button'>Login</button>
                             <button onClick={this.registerUser} className='auth-register-button'>Register</button>
                         </div>
+                           <h1>{this.state.error} </h1>
                     </div>
                     <div className='auth-child-right'></div> 
                 </div>

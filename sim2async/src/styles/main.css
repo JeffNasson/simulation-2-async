@@ -211,8 +211,11 @@ table {
   align-items: center; }
 
 .logout-text {
+  background-color: #519872;
   color: #F6F0F0;
-  font-family: 'Open Sans',sans-serif; }
+  font-family: 'Open Sans',sans-serif;
+  font-size: 20px;
+  border: 0; }
 
 .wizard-parent {
   height: 868px;
