@@ -177,6 +177,37 @@ table {
   background-color: #3b5249;
   color: #F6F0F0; }
 
+.display-properties-parent {
+  height: 150px;
+  width: 100%;
+  background-color: #8aea92;
+  display: flex;
+  margin: 1%; }
+
+.display-properties-parent hr {
+  background-color: #3b5249; }
+
+.display-properties-info-right {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 5%; }
+
+.display-properties-info-center {
+  width: 33%;
+  display: flex;
+  flex-direction: column; }
+
+.display-properties-info-center h5 {
+  margin-top: 2%;
+  margin-bottom: 2%; }
+
+.display-properties-parent img {
+  height: 150px;
+  width: 150px;
+  background-color: #afd4c0; }
+
 .header-parent {
   background-color: #519872;
   display: flex;

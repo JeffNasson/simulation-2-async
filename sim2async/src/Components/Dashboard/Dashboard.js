@@ -24,18 +24,21 @@ export default class Dashboard extends Component{
         let displayProperties = this.state.properties.map((property,i)=>{
             return(
             // console.log(property)
-            <div className='display-properties-parent'>
-                <h5>{property.property_name}</h5>
-                <h5>{property.property_description}</h5>
-                <hr />
-                <h5>{property.address}</h5>
-                <h5>{property.city}</h5>
-                <h5>{property.desired_rent}</h5>
+            <div className='display-properties-parent' key={i}>
                 <img src={property.image_url} alt='property-image' />
-                <h5>{property.loan_amount}</h5>
-                <h5>{property.monthly_mortgage}</h5>
-                <h5>{property.state}</h5>
-                <h5>{property.zip}</h5>
+                <div className='display-properties-info-center'>
+                    <h5>{property.property_name}</h5>
+                    <h5>{property.property_description}</h5>
+                </div>
+                <hr />
+                <div className='display-properties-info-right'>
+                    <h5>Loan: ${property.loan_amount}</h5>
+                    <h5>Monthly Mortgage: ${property.monthly_mortgage}</h5>
+                    <h5>Recommended Rent: ${property.recommended_rent}</h5>
+                    <h5>Desired Rent: ${property.desired_rent}</h5>
+                    <h5>Address: {property.address}</h5>
+                    <h5>City: {property.city}</h5>
+                </div>
             </div>
             )
         })

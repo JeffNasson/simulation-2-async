@@ -1,12 +1,25 @@
 import React, {Component} from 'react';
 import {Route,Switch,Link} from 'react-router-dom';
+import axios from 'axios';
 
 
 
 export default class Wizard extends Component{
     constructor(){
         super();
-        this.state={}
+        this.state={
+            propertyName:'',
+            propertyDescription:''
+        }
+        this.updatePropertyName=this.updatePropertyName.bind(this);
+        this.updatePropertyDescription=this.updatePropertyDescription.bind(this);
+    }
+
+    updatePropertyName(val){
+        this.setState({propertyName: val})
+    }
+    updatePropertyDescription(val){
+        this.setState({propertyDescription: val})
     }
 
     render(){
@@ -28,8 +41,8 @@ export default class Wizard extends Component{
                                 <div className='wizard1-background-dots'></div>
                             </div>
                             <div className='wizard1-property-name-description'>
-                                <h2>Property Name</h2><input className='wizard1-property-name' type='text' />
-                                <h2>Property Description</h2><input className='wizard1-property-description' type='text' />
+                                <h2>Property Name</h2><input className='wizard1-property-name' type='text' value={this.state.propertyName} onChange={(event)=>this.updatePropertyName(event.target.value)} />
+                                <h2>Property Description</h2><input className='wizard1-property-description' type='text' value={this.state.propertyDescription} onChange={(event)=>this.updatePropertyDescription(event.target.value)} />
                             </div>
                            <Link to='/wizard/2'><button className='wizard1-next-button'>Next Step</button></Link>
                         </div>
