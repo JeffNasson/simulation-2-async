@@ -52,6 +52,9 @@ table {
   height: 100vh;
   width: 100%; }
 
+.auth-parent button {
+  outline: none; }
+
 .auth-child {
   height: 100%;
   display: flex;
@@ -203,6 +206,16 @@ table {
   margin-top: 2%;
   margin-bottom: 2%; }
 
+.display-properties-info-far-right {
+  height: 100%;
+  width: 3%; }
+
+.display-properties-info-far-right button {
+  border: 0;
+  background: none;
+  margin-top: 20%;
+  color: #3b5249; }
+
 .display-properties-parent img {
   height: 150px;
   width: 150px;
@@ -212,7 +225,11 @@ table {
   background-color: #519872;
   display: flex;
   height: 100px;
-  width: 100%; }
+  width: 100%;
+  text-decoration: none; }
+
+.header-parent button {
+  outline: none; }
 
 .houser-header-textlogo {
   display: flex;
@@ -227,13 +244,28 @@ table {
   padding: 10px;
   color: #F6F0F0;
   font-size: 30px;
-  font-family: 'Open Sans',sans-serif; }
+  font-family: 'Open Sans',sans-serif;
+  text-decoration: none; }
+
+.houser-header-textlogo button {
+  padding: 10px;
+  color: #F6F0F0;
+  background-color: #519872;
+  font-size: 30px;
+  font-family: 'Open Sans',sans-serif;
+  text-decoration: none;
+  border: 0;
+  outline: none; }
+
+.houser-header-textlogo button:active {
+  outline: none; }
 
 .houser-bold {
   font-weight: 700; }
 
 .dashboard {
-  font-weight: 400; }
+  font-weight: 400;
+  text-decoration: none; }
 
 .logout-parent {
   width: 50%;
@@ -253,6 +285,9 @@ table {
   width: 100%;
   background-color: #8aea92;
   font-family: "Open Sans", sans-serif; }
+
+.wizard-parent button {
+  outline: none; }
 
 .wizard-base-child {
   height: 100%;
@@ -376,6 +411,11 @@ table {
 .wizard1-property-name-description input {
   width: 100%;
   border: 3px solid #afd4c0; }
+
+.wizard1-property-name-description textarea {
+  width: 100%;
+  border: 3px solid #afd4c0;
+  resize: none; }
 
 .wizard1-property-description {
   height: 100px;
@@ -504,6 +544,10 @@ table {
   border: 3px solid #519872;
   background-color: #afd4c0;
   margin-bottom: 3%; }
+
+.wizard3-preview-image img {
+  height: 100%;
+  width: 100%; }
 
 .wizard3-imageurl-parent {
   width: 100%;

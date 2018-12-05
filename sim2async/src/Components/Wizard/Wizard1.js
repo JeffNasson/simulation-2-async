@@ -7,15 +7,15 @@ import {updatePropertyDescription,updatePropertyName} from '../../dux/reducer.js
 
 
 class Wizard1 extends Component{
-    constructor(){
-        super();
-        this.state={
-            propertyName:'',
-            propertyDescription:''
-        }
-        // this.updatePropertyName=this.updatePropertyName.bind(this);
-        // this.updatePropertyDescription=this.updatePropertyDescription.bind(this);
-    }
+    // constructor(props){
+    //     super(props);
+    //     this.state={
+    //         propertyName:this.props.propertyName,
+    //         propertyDescription:''
+    //     }
+    //     // this.updatePropertyName=this.updatePropertyName.bind(this);
+    //     // this.updatePropertyDescription=this.updatePropertyDescription.bind(this);
+    // }
 
     // updatePropertyName(val){
     //     this.setState({propertyName: val})
@@ -26,7 +26,7 @@ class Wizard1 extends Component{
 
     render(){
         const{updatePropertyDescription,updatePropertyName} = this.props;
-        // console.log(this.props)
+        console.log(this.props)
         // console.log(updatePropertyDescription,updatePropertyName)
         return(
             <div className='wizard-base-child'>
@@ -46,8 +46,8 @@ class Wizard1 extends Component{
                                 <div className='wizard1-background-dots'></div>
                             </div>
                             <div className='wizard1-property-name-description'>
-                                <h2>Property Name</h2><input className='wizard1-property-name' type='text' onChange={(event)=>updatePropertyName(event.target.value)} />
-                                <h2>Property Description</h2><input className='wizard1-property-description' type='text'  onChange={(event)=>updatePropertyDescription(event.target.value)} />
+                                <h2>Property Name</h2><input className='wizard1-property-name' type='text' value={this.props.propertyName} onChange={(event)=>updatePropertyName(event.target.value)} />
+                                <h2>Property Description</h2><textarea className='wizard1-property-description' type='text' value={this.props.propertyDescription} onChange={(event)=>updatePropertyDescription(event.target.value)} />
                             </div>
                            <Link to='/wizard/2'><button className='wizard1-next-button'>Next Step</button></Link>
                         </div>

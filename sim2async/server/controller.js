@@ -6,7 +6,7 @@ module.exports={
         const { username, password } = req.body
         const db = req.app.get('db')
         db.checkUsername([username]).then(user => {
-            console.log(user)
+            // console.log(user)
             if (user.length !== 0) {
                 res.status(200).send('Username Taken. Try another.')
             } else {
@@ -41,7 +41,7 @@ module.exports={
                         session_id_count++
                         req.session.user.id = user[0].id
                         req.session.user.username = user[0].username
-                        console.log(user)
+                        // console.log(user)
                         res.status(200).send()
                     } else {
                         res.status(200).send('Invalid Password')
@@ -63,16 +63,18 @@ module.exports={
 
     newProperty:(req,res)=>{
         const db = req.app.get('db');
-        let {property_name,property_description,address,city,state,zip,image_url,loan_amount,monthly_mortgage,desired_rent} = req.body
+        let {desiredRent,monthlyMortgage,propertyName,propertyDescription,address,city,province,zip,image,loanAmount} = req.body;
+        const user = req.session.user.id;
+        console.log(req.body);
 
-        db.new_property([property_name,property_description,address,city,state,zip,image_url,loan_amount,monthly_mortgage,desired_rent])
+        db.new_property([user,propertyName,propertyDescription,address,city,province,zip,image,loanAmount,monthlyMortgage,desiredRent]) 
             .then(property=>console.log(property)||res.status(200).send(property))
             .catch(err=>console.log(err))
     },
 
     getProperties:(req,res)=>{
         const db= req.app.get('db');
-        console.log(req.session.user)
+        // console.log(req.session.user)
         const {id} = req.session.user
 
         db.get_properties([+id])
@@ -84,8 +86,8 @@ module.exports={
         const db = req.app.get('db');
         const {id} = req.params;
         const session_id = req.session.user.id
-        console.log(id)
-        console.log(session_id)
+        // console.log(id)
+        // console.log(session_id)
 
         db.delete_property([session_id,+id])
             .then()

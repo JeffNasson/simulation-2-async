@@ -11,6 +11,7 @@ const intitialState={
     desiredRent:0
 }
 
+const UPDATE_USER = 'UPDATE_USER';
 const UPDATE_PROPERTY_NAME = 'UPDATE_PROPERTY_NAME';
 const UPDATE_PROPERTY_DESCRIPTION = 'UPDATE_PROPERTY_DESCRIPTION';
 const UPDATE_ADDRESS = 'UPDATE_ADDRESS';
@@ -57,6 +58,9 @@ function reducer(state=intitialState,action){
         case UPDATE_DESIRED_RENT:
             return Object.assign({},state,{desiredRent:action.payload});
 
+        case UPDATE_USER:
+            return Object.assign({},state,{user: action.payload})
+
 
         default: return state;
     }
@@ -100,7 +104,7 @@ export function updateProvince(province){
 export function updateZip(zip){
     return{
         type: UPDATE_ZIP,
-        paylod: zip
+        payload: zip
     }
 }
 
@@ -129,6 +133,13 @@ export function updateDesiredRent(rent){
     return{
         type: UPDATE_DESIRED_RENT,
         payload: rent
+    }
+}
+
+export function updateUser(user){
+    return{
+        type: UPDATE_USER,
+        payload: user
     }
 }
 

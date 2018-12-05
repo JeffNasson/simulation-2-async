@@ -3,6 +3,11 @@
     display: flex;
     height: 100px;
     width: 100%;
+    text-decoration: none;
+}
+
+.header-parent button{
+    outline: none;
 }
 
 .houser-header-textlogo{
@@ -21,6 +26,21 @@
     color: $color-white;
     font-size: 30px;
     font-family:'Open Sans',sans-serif;
+    text-decoration: none;
+}
+
+.houser-header-textlogo button{
+    padding: 10px;
+    color: $color-white;
+    background-color: $color-mid-green;
+    font-size: 30px;
+    font-family:'Open Sans',sans-serif;
+    text-decoration: none;
+    border:0;
+    outline: none;
+}
+.houser-header-textlogo button:active{
+    outline: none;
 }
 
 .houser-bold{
@@ -28,6 +48,7 @@
 }
 .dashboard{
     font-weight: 400;
+    text-decoration: none;
 }
 
 
@@ -45,3 +66,4 @@
     font-size: 20px;
     border: 0;
 }
+

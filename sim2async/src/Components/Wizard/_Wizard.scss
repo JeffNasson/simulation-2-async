@@ -6,6 +6,10 @@
     font-family: $font-sans;
 }
 
+.wizard-parent button{
+    outline: none;
+}
+
 .wizard-base-child{
     height: 100%;
     display: flex;
@@ -145,6 +149,12 @@
 .wizard1-property-name-description input{
     width: 100%;
     border: 3px solid $color-clear-green;
+}
+
+.wizard1-property-name-description textarea{
+    width: 100%;
+    border: 3px solid $color-clear-green;
+    resize: none;
 }
 
 .wizard1-property-description{
@@ -301,6 +311,11 @@
     border: 3px solid $color-mid-green;
     background-color: $color-clear-green;
     margin-bottom: 3%;
+}
+
+.wizard3-preview-image img{
+    height: 100%;
+    width:100%;
 }
 
 .wizard3-imageurl-parent{

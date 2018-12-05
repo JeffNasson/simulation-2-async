@@ -118,10 +118,23 @@
     margin-bottom: 2%;
 }
 
+.display-properties-info-far-right{
+    height: 100%;
+    width:3%;
+}
+
+.display-properties-info-far-right button{
+    border: 0;
+    background: none;
+    margin-top: 20%;
+    color: $color-dark-green;
+}
+
 .display-properties-parent img{
     height: 150px;
     width: 150px;
     background-color: $color-clear-green;
 }
+
 
 //end house display

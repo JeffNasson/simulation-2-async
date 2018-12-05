@@ -25,7 +25,7 @@ class Header extends Component{
                 <div className='houser-header-textlogo'>
                     <img className='house-logo' src={House} />
                     <h1 className='houser-bold'>Houser</h1>
-                    <h1 className='dashboard'>Dashboard</h1>
+                    <Link to='/dashboard'><button className='dashboard'>Dashboard</button></Link>
                 </div>
                 <div className='logout-parent'>
                     <button onClick={this.logout} className='logout-text'>Logout</button>

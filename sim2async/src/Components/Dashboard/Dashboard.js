@@ -39,6 +39,9 @@ export default class Dashboard extends Component{
                     <h5>Address: {property.address}</h5>
                     <h5>City: {property.city}</h5>
                 </div>
+                <div className='display-properties-info-far-right'>
+                    <button className='delete-property-button'>X</button>
+                </div>
             </div>
             )
         })

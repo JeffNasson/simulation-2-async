@@ -1,15 +1,18 @@
 import React, {Component} from 'react';
 import {Route,Switch,Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import {updateImage} from '../../dux/reducer.js';
 
 
 
-export default class Wizard extends Component{
+class Wizard3 extends Component{
     constructor(){
         super();
         this.state={}
     }
 
     render(){
+        const {updateImage} = this.props
         return(
             <div className='wizard-base-child'>
                     <div className='wizard-base-left'></div>
@@ -29,12 +32,12 @@ export default class Wizard extends Component{
                             </div>
                             
                             <div className='wizard3-preview-image'>
-                            <h3>Preview</h3>
+                            <img src={this.props.image} alt='Preview' />
                             </div>
                             
                             <div className='wizard3-imageurl-parent'>
                                 <h2>Image URL</h2>
-                                <input className='wizard3-imageurl' type='text' />
+                                <input className='wizard3-imageurl' type='text' alternate='home image' value={this.props.image} onChange={(e)=>updateImage(e.target.value)} />
                             </div>
                             
                             <div className='wizard2-step-buttons'>
@@ -48,3 +51,12 @@ export default class Wizard extends Component{
         )
     }
 }
+
+function mapStateToProps(state){
+    const {image} = state
+    return{
+        image
+    }
+}
+
+export default connect(mapStateToProps,{updateImage})(Wizard3);
