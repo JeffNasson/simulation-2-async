@@ -206,6 +206,11 @@ table {
   margin-top: 2%;
   margin-bottom: 2%; }
 
+.display-properties-info-center h6 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-weight: 400; }
+
 .display-properties-info-far-right {
   height: 100%;
   width: 3%; }
@@ -548,6 +553,9 @@ table {
 .wizard3-preview-image img {
   height: 100%;
   width: 100%; }
+
+.wizard3-preview-image alt {
+  text-align: center; }
 
 .wizard3-imageurl-parent {
   width: 100%;

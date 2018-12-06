@@ -22,6 +22,7 @@ const UPDATE_IMAGE = 'UPDATE_IMAGE';
 const UPDATE_LOAN_AMOUNT = 'UPDATE_LOAN_AMOUNT';
 const UPDATE_MONTHLY_MORTGAGE = 'UPDATE_MONTHLY_MORTGAGE';
 const UPDATE_DESIRED_RENT = 'UPDATE_DESIRED_RENT';
+const CLEAR_STATE = 'CLEAR_STATE';
 
 
 
@@ -60,6 +61,9 @@ function reducer(state=intitialState,action){
 
         case UPDATE_USER:
             return Object.assign({},state,{user: action.payload})
+
+        case CLEAR_STATE:
+            return (intitialState)
 
 
         default: return state;
@@ -140,6 +144,12 @@ export function updateUser(user){
     return{
         type: UPDATE_USER,
         payload: user
+    }
+}
+
+export function clearState(){
+    return{
+        type: CLEAR_STATE,
     }
 }
 

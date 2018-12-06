@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Route,Switch,Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import axios from 'axios';
-import {updateDesiredRent} from '../../dux/reducer.js'; 
+import {updateDesiredRent,clearState} from '../../dux/reducer.js'; 
 
 
 
@@ -18,6 +18,7 @@ class Wizard5 extends Component{
         const {desiredRent,monthlyMortgage,propertyName,propertyDescription,address,city,province,zip,image,loanAmount,user} = this.props
         axios.post(`/api/properties`,{desiredRent,monthlyMortgage,propertyName,propertyDescription,address,city,province,zip,image,loanAmount,user})
              .then(()=>{
+                 this.props.clearState()
                  this.props.history.push('/dashboard')
              })
     }
@@ -60,7 +61,7 @@ class Wizard5 extends Component{
 }
 
 function mapStateToProps(state){
-    const {desiredRent,monthlyMortgage,propertyName,propertyDescription,address,city,province,zip,image,loanAmount,user} = state
+    const {desiredRent,monthlyMortgage,propertyName,propertyDescription,address,city,province,zip,image,loanAmount} = state
     return {
         desiredRent,
         monthlyMortgage,
@@ -72,8 +73,7 @@ function mapStateToProps(state){
         zip,
         image,
         loanAmount,
-        user
     }
 }
 
-export default connect(mapStateToProps,{updateDesiredRent})(Wizard5);
+export default connect(mapStateToProps,{updateDesiredRent,clearState})(Wizard5);

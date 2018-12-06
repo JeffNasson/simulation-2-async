@@ -10,6 +10,7 @@ export default class Dashboard extends Component{
         this.state={
             properties:[],
         }
+        this.deleteHouse=this.deleteHouse.bind(this);
     }
 
     componentDidMount(){
@@ -20,27 +21,35 @@ export default class Dashboard extends Component{
              })
     }
 
+    deleteHouse(id){
+        axios.delete(`/api/properties/${id}`)
+             .then((res)=>console.log(res.data)||this.setState({properties:res.data}))
+    }
+
+
     render(){
         let displayProperties = this.state.properties.map((property,i)=>{
+            console.log(property)
             return(
-            // console.log(property)
             <div className='display-properties-parent' key={i}>
-                <img src={property.image_url} alt='property-image' />
+                <img src={property.image_url} alt='150x150' />
                 <div className='display-properties-info-center'>
                     <h5>{property.property_name}</h5>
-                    <h5>{property.property_description}</h5>
+                    <h6>{property.property_description}</h6>
                 </div>
                 <hr />
                 <div className='display-properties-info-right'>
                     <h5>Loan: ${property.loan_amount}</h5>
                     <h5>Monthly Mortgage: ${property.monthly_mortgage}</h5>
-                    <h5>Recommended Rent: ${property.recommended_rent}</h5>
+                    {/* <h5>Recommended Rent: ${property.recommended_rent}</h5> */}
                     <h5>Desired Rent: ${property.desired_rent}</h5>
                     <h5>Address: {property.address}</h5>
                     <h5>City: {property.city}</h5>
+                    <h5>State: {property.state}</h5>
+                    <h5>Zip: {property.zip}</h5>
                 </div>
                 <div className='display-properties-info-far-right'>
-                    <button className='delete-property-button'>X</button>
+                    <button className='delete-property-button' onClick={()=>this.deleteHouse(property.id)} >X</button>
                 </div>
             </div>
             )

@@ -90,7 +90,7 @@ module.exports={
         // console.log(session_id)
 
         db.delete_property([session_id,+id])
-            .then()
+            .then(updatedHouses=>console.log(updatedHouses)||res.status(200).send(updatedHouses))
             .catch(err=>console.log(err))
     },
 
