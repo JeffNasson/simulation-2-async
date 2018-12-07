@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route,Switch,Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import{updateAddress,updateCity,updateProvince,updateZip} from '../../dux/reducer.js';
+import{updateAddress,updateCity,updateProvince,updateZip,clearState} from '../../dux/reducer.js';
 
 
 
@@ -20,7 +20,7 @@ class Wizard2 extends Component{
                     <div className='wizard-base-center'>
                         <div className='add-new-listing-cancel-button'>
                             <h1>Add New Listing</h1>
-                            <button>Cancel</button>
+                            <button onClick={()=>this.props.clearState(this.props.history.push('/dashboard'))}>Cancel</button>
                         </div>
                         <div className='wizard2-parent'>
                             <h3>Step 2</h3>
@@ -40,10 +40,10 @@ class Wizard2 extends Component{
                             </div>
                             <div className='wizard2-city-state'>
                                  <input className='wizard2-city' type='text' value={this.props.city} onChange={(e)=>updateCity(e.target.value)} />
-                                 <input className='wizard2-state' type='text' value={this.props.province} onChange={(e)=>updateProvince(e.target.value)} />
+                                 <input className='wizard2-state' type='text' maxLength='2' value={this.props.province} onChange={(e)=>updateProvince(e.target.value)} />
                             </div>
                             <div className='wizard2-zip-parent'>
-                                <h2>Zip</h2> <input className='wizard2-zip' type='text' value={this.props.zip} onChange={(e)=>updateZip(e.target.value)} />
+                                <h2>Zip</h2> <input className='wizard2-zip' type='text' maxLength='5' value={this.props.zip} onChange={(e)=>updateZip(e.target.value)} />
                             </div>
                             <div className='wizard2-step-buttons'>
                                 <Link to='/wizard/1'><button className='wizard2-previous-button'>Previous Step</button></Link>
@@ -67,4 +67,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{updateAddress,updateCity,updateProvince,updateZip})(Wizard2)
+export default connect(mapStateToProps,{updateAddress,updateCity,updateProvince,updateZip,clearState})(Wizard2)

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route,Switch,Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import {updateImage} from '../../dux/reducer.js';
+import {updateImage,clearState} from '../../dux/reducer.js';
 
 
 
@@ -12,14 +12,14 @@ class Wizard3 extends Component{
     }
 
     render(){
-        const {updateImage} = this.props
+        const {updateImage,image} = this.props
         return(
             <div className='wizard-base-child'>
                     <div className='wizard-base-left'></div>
                     <div className='wizard-base-center'>
                         <div className='add-new-listing-cancel-button'>
                             <h1>Add New Listing</h1>
-                            <button>Cancel</button>
+                            <button onClick={()=>this.props.clearState(this.props.history.push('/dashboard'))}>Cancel</button>
                         </div>
                         <div className='wizard3-parent'>
                             <h3>Step 3</h3>
@@ -30,10 +30,19 @@ class Wizard3 extends Component{
                                 <div className='wizard2-background-dots2'></div>
                                 <div className='wizard2-background-dots2'></div>
                             </div>
-                            
-                            <div className='wizard3-preview-image'>
-                            <img src={this.props.image} alt='Preview' />
-                            </div>
+                            {
+                                image ? (
+                                    <div className='wizard3-preview-image'>
+                                        <img src={image} />
+                                    </div>
+                                ) 
+                                : 
+                                (
+                                    <div className='wizard3-preview-image'>
+                                        <img src='https://www.syncron.com/wp-content/uploads/2017/03/img-placeholder.png' />
+                                    </div>
+                                )
+                            }
                             
                             <div className='wizard3-imageurl-parent'>
                                 <h2>Image URL</h2>
@@ -59,4 +68,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{updateImage})(Wizard3);
+export default connect(mapStateToProps,{updateImage,clearState})(Wizard3);

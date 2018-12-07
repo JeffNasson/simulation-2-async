@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route,Switch,Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {updateLoanAmount,updateMonthlyMortgage} from '../../dux/reducer.js';
+import {updateLoanAmount,updateMonthlyMortgage,clearState} from '../../dux/reducer.js';
 
 
 
@@ -19,7 +19,7 @@ class Wizard4 extends Component{
                     <div className='wizard-base-center'>
                         <div className='add-new-listing-cancel-button'>
                             <h1>Add New Listing</h1>
-                            <button>Cancel</button>
+                            <button onClick={()=>this.props.clearState(this.props.history.push('/dashboard'))}>Cancel</button>
                         </div>
                         <div className='wizard4-parent'>
                             <h3>Step 4</h3>
@@ -59,4 +59,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{updateLoanAmount,updateMonthlyMortgage})(Wizard4)
+export default connect(mapStateToProps,{updateLoanAmount,updateMonthlyMortgage,clearState})(Wizard4)

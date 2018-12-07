@@ -32,7 +32,7 @@ class Wizard5 extends Component{
                     <div className='wizard-base-center'>
                         <div className='add-new-listing-cancel-button'>
                             <h1>Add New Listing</h1>
-                            <button>Cancel</button>
+                            <button onClick={()=>this.props.clearState(this.props.history.push('/dashboard'))}>Cancel</button>
                         </div>
                         <div className='wizard5-parent'>
                             <h3>Step 5</h3>

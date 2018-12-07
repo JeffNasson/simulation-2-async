@@ -9,8 +9,12 @@ export default class Dashboard extends Component{
         super();
         this.state={
             properties:[],
+            val:''
         }
         this.deleteHouse=this.deleteHouse.bind(this);
+        this.filterHouses=this.filterHouses.bind(this);
+        this.handleFilterText=this.handleFilterText.bind(this);
+        this.resetPage=this.resetPage.bind(this);
     }
 
     componentDidMount(){
@@ -21,18 +25,39 @@ export default class Dashboard extends Component{
              })
     }
 
+    filterHouses(val){
+        axios.get(`/api/properties/${val}`)
+             .then((res)=>{
+                 this.setState({properties:res.data})
+             })
+    }
+
     deleteHouse(id){
         axios.delete(`/api/properties/${id}`)
              .then((res)=>console.log(res.data)||this.setState({properties:res.data}))
     }
 
+    handleFilterText(val){
+        this.setState({val:val})
+    }
+
+    resetPage(){
+        let val='0'
+        this.setState({val:val})
+        window.location.reload()
+    }
+
 
     render(){
+
         let displayProperties = this.state.properties.map((property,i)=>{
-            console.log(property)
+            // console.log(property)
             return(
             <div className='display-properties-parent' key={i}>
-                <img src={property.image_url} alt='150x150' />
+            {
+                property.image_url ? (<img src={property.image_url} alt='150x150' />) : 
+                        (<img src='https://montereywines.org/wp-content/uploads/2018/09/placeholder-1.png' />)
+            }
                 <div className='display-properties-info-center'>
                     <h5>{property.property_name}</h5>
                     <h6>{property.property_description}</h6>
@@ -55,6 +80,8 @@ export default class Dashboard extends Component{
             )
         })
 
+        console.log(displayProperties.desired_rent)
+
         return(
             <div className='dashboard-parent'>
                 <Header /> 
@@ -64,9 +91,10 @@ export default class Dashboard extends Component{
                     <div className='dashboard-child-center'>
                         <Link to='/wizard/1'><button className='add-new-property-button'>Add New Property</button></Link>
                         <div className='desired-rent-filter-reset'>
-                            List properties with "desired rent" greater than: $<input placeholder='0' />
-                            <button className='filter-button'>Filter</button>
-                            <button className='reset-button'>Reset</button>
+                            List properties with "desired rent" greater than: $<input placeholder='0' value={this.state.val} onChange={(e)=>this.handleFilterText(e.target.value)} />
+
+                            <button className='filter-button' onClick={()=>this.filterHouses(this.state.val)} >Filter</button>
+                            <button className='reset-button' onClick={()=>this.resetPage()} >Reset</button>
                         <hr />
                         </div> 
                         <h1>Home Listings</h1>
@@ -79,3 +107,4 @@ export default class Dashboard extends Component{
         )
     }
 }
+

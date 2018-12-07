@@ -155,6 +155,7 @@
     width: 100%;
     border: 3px solid $color-clear-green;
     resize: none;
+    font-family: $font-sans;
 }
 
 .wizard1-property-description{
@@ -318,9 +319,6 @@
     width:100%;
 }
 
-.wizard3-preview-image alt{
-    text-align: center;
-}
 
 .wizard3-imageurl-parent{
     width: 100%;

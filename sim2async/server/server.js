@@ -49,6 +49,7 @@ app.post(`/api/logout`,ctrl.logout);
 app.post('/api/properties',ctrl.newProperty);
 app.get(`/api/properties`,ctrl.getProperties);
 app.delete(`/api/properties/:id`,ctrl.deleteProperty);
+app.get(`/api/properties/:val`,ctrl.filteredProperties)
 
 ////End Properties Endpoints
 

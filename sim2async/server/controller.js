@@ -94,5 +94,16 @@ module.exports={
             .catch(err=>console.log(err))
     },
 
+    filteredProperties:(req,res)=>{
+        const db=req.app.get('db');
+
+        const {val} = req.params;
+        const session_id = req.session.user.id;
+
+        db.get_filtered_properties([+val,session_id])
+            .then(filteredHouses=>console.log(filteredHouses)||res.status(200).send(filteredHouses))
+            .catch(err=>console.log(err))
+    },
+
     //end Properties
 }

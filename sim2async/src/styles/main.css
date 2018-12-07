@@ -420,7 +420,8 @@ table {
 .wizard1-property-name-description textarea {
   width: 100%;
   border: 3px solid #afd4c0;
-  resize: none; }
+  resize: none;
+  font-family: "Open Sans", sans-serif; }
 
 .wizard1-property-description {
   height: 100px;
@@ -553,9 +554,6 @@ table {
 .wizard3-preview-image img {
   height: 100%;
   width: 100%; }
-
-.wizard3-preview-image alt {
-  text-align: center; }
 
 .wizard3-imageurl-parent {
   width: 100%;
